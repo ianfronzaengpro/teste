@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentação / Planejamento - EngPro</title>
+  <style>
+    :root {
+      --bg-main: #0f0f15;
+      --bg-card: #1a1a24;
+      --border-color: #2a2a38;
+      --accent-color: #00d2ff;
+      --text-main: #ffffff;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Cabeçalho */
+    header {
+      background: var(--bg-main);
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      letter-spacing: 0.5px;
+    }
+
+    .header-badge {
+      font-size: 0.85rem;
+      background: rgba(0, 210, 255, 0.1);
+      color: var(--accent-color);
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 210, 255, 0.3);
+    }
+
+    /* Layout Principal */
+    .main-layout {
+      flex: 1;
+      display: flex;
+      padding: 24px;
+      gap: 24px;
+      overflow: hidden;
+    }
+
+    /* Área de Conteúdo / Visualizador */
+    .content-area {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Painel Lateral / Informações */
+    .sidebar {
+      width: 360px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: auto;
+    }
+
+    .card-section {
+      background: #12121a;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .card-section h3 {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      color: var(--text-muted);
+    }
+
+    .info-val {
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    /* Botões */
+    .btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background: #374151;
+    }
+
+    .btn-secondary:hover {
+      background: #4b5563;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Planejamento e Apresentação - EngPro</h1>
+    <div class="header-badge">Modo Apresentação</div>
+  </header>
+
+  <div class="main-layout">
+    <!-- Área Central (Onde entram os slides, gráficos ou visualizador 3D) -->
+    <div class="content-area">
+      <div style="text-align: center; padding: 20px;">
+        <h2 style="margin-bottom: 8px; color: #fff;">Área Principal de Exibição</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Insira aqui o seu conteúdo estruturado ou o canvas do projeto.</p>
+      </div>
+    </div>
+
+    <!-- Painel Lateral de Controle / Informações -->
+    <div class="sidebar">
+      <div class="card-section">
+        <h3>Painel de Controle</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+          Gerencie os parâmetros da apresentação e dados do projeto.
+        </p>
+        <button class="btn" style="margin-bottom: 10px;">📂 Carregar Dados</button>
+        <button class="btn btn-secondary">⚙️ Configurações</button>
+      </div>
+
+      <div class="card-section">
+        <h3>Metadados do Projeto</h3>
+        <div class="info-row">
+          <span class="info-label">Status:</span>
+          <span class="info-val" style="color: #10b981;">Ativo / Online</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Versão:</span>
+          <span class="info-val">1.0.0</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Ambiente:</span>
+          <span class="info-val">Produção</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
